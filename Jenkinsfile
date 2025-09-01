@@ -10,6 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/SetsiriAunsiam/sonarqube-with-jenkins.git'
+                git branch: 'feature/lab', url: 'https://github.com/SetsiriAunsiam/sonarqube-with-jenkins.git'
             }
         }
 

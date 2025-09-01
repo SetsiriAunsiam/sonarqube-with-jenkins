@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 
 // Route handling
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello PSU Students!");
 });
 
 app.get("/about", (req, res) => {
