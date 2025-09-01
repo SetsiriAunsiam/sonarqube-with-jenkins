@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE = credentials('setsiri') // ชื่อ Credential ของ Jenkins
+        SONARQUBE = credentials('sonarqube-token') // ชื่อ Credential ของ Jenkins
     }
 
     stages {
