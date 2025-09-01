@@ -33,10 +33,6 @@ pipeline {
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
-                    sonarQubeScanResult = waitForQualityGate()
-                    if (sonarQubeScanResult.status != 'OK') {
-                        error "Pipeline aborted due to quality gate failure: ${sonarQubeScanResult.status}"
-                    }
                 }
             }
         }
