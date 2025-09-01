@@ -28,6 +28,19 @@ app.use((req, res, next) => {
 });
 
 // Route handling
+app.get("/users/:id", (req, res) => {
+  const userId = req.params.id;
+  const sql = "SELECT * FROM users WHERE id = " + userId;
+
+  connection.query(sql, (err, results) => {
+    if (results.length > 0) {
+      res.json(results);
+    } else {
+      res.send("User not found");
+    }
+  });
+});
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
