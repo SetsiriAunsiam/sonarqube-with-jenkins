@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
-        SONARQUBE = credentials('sonarqube-token') // ชื่อ Credential ของ Jenkins
-    }
+    // environment {
+    //     SONARQUBE = credentials('sonarqube-token') // ชื่อ Credential ของ Jenkins
+    // }
     tools {
         nodejs 'NodeJS' // ชื่อ NodeJS Installation ใน Jenkins
     }
